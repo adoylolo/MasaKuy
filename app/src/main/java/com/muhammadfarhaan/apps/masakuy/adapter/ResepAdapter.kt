@@ -32,7 +32,7 @@ class ResepAdapter(cont:Context, data:ArrayList<DataResep>): RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ResepHolder, position: Int) {
         holder.vnama.text = dataReseps[position].nama
-        holder.vdesc.text = dataReseps[position].desc
+        //holder.vdesc.text = dataReseps[position].desc
         Picasso.get().load(dataReseps[position].image).into(holder.vimage)
     }
 
@@ -42,11 +42,11 @@ class ResepAdapter(cont:Context, data:ArrayList<DataResep>): RecyclerView.Adapte
 
     class ResepHolder(@NonNull itemView: View):RecyclerView.ViewHolder(itemView) {
         internal var vnama: TextView
-        internal var vdesc: TextView
+        //internal var vdesc: TextView
         internal var vimage: ImageView
         init{
             vnama = itemView.findViewById(R.id.txt_title_resep)
-            vdesc = itemView.findViewById(R.id.txt_desc_resep)
+            //vdesc = itemView.findViewById(R.id.txt_desc_resep)
             vimage = itemView.findViewById(R.id.img_resep)
         }
     }

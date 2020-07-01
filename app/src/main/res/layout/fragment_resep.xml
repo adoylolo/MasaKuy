@@ -9,7 +9,7 @@
         android:id="@+id/relative_resep"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
+        android:background="#60000000"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -35,30 +35,12 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:background="#FFFFFF">
 
-        <TextView
-            android:id="@+id/txt_resep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="8dp"
-            android:text="Daftar Resep"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_resep"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/txt_resep"
             android:layout_margin="10dp"/>
 
     </RelativeLayout>

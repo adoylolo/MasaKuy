@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -41,7 +42,7 @@ class ResepFragment : Fragment() {
         r_Database = FirebaseDatabase.getInstance().getReference("Resep")
         r_Recycler = view.findViewById(R.id.recycler_resep)
         r_Recycler.setHasFixedSize(true)
-        val layoutManager = LinearLayoutManager(context)
+        val layoutManager = GridLayoutManager(context,2)
         r_Recycler.layoutManager = layoutManager
 
         r_Database.addValueEventListener(object : ValueEventListener {
