@@ -9,10 +9,11 @@
         android:roundIcon="@drawable/logo_transparent"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.resep.DetailResep" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

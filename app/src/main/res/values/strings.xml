@@ -10,4 +10,12 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_resep">Resep</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec nec varius leo. Curabitur libero erat, tincidunt commodo varius non, mattis eu justo.
+        Mauris mattis varius pretium. Suspendisse vitae magna arcu. Cras rhoncus in nibh vulputate pharetra.
+        Sed feugiat sapien finibus aliquam hendrerit. Proin ac enim risus. Nam in cursus dui.
+        Donec tristique at leo et mollis. In dapibus felis quis mi finibus, vel varius purus scelerisque.
+        Nunc pellentesque quam ac aliquam aliquet. Nullam maximus mi eu posuere fermentum. Nam ut mi magna.
+        Phasellus sed mi dui. Proin nec tortor id nulla imperdiet consectetur ut ac nisl.
+        Nulla sed eros vitae mauris tincidunt aliquet eu in sapien. Quisque euismod lorem vel convallis laoreet.</string>
 </resources>

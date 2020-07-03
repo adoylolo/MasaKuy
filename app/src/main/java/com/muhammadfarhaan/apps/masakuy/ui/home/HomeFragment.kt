@@ -19,8 +19,6 @@ import com.muhammadfarhaan.apps.masakuy.model.DataResep
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
-
     lateinit var h_Recycler : RecyclerView
     lateinit var h_Database : DatabaseReference
     lateinit var h_list: ArrayList<DataResep>
@@ -31,13 +29,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
         return root
     }
 

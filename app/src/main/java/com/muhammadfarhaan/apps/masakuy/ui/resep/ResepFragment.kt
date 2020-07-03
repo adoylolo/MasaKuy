@@ -1,9 +1,12 @@
 package com.muhammadfarhaan.apps.masakuy.ui.resep
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
@@ -17,8 +20,6 @@ import com.muhammadfarhaan.apps.masakuy.model.DataResep
 
 class ResepFragment : Fragment() {
 
-    private lateinit var resepViewModel: ResepViewModel
-
     lateinit var r_Recycler : RecyclerView
     lateinit var r_Database : DatabaseReference
     lateinit var r_list: ArrayList<DataResep>
@@ -29,8 +30,6 @@ class ResepFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        resepViewModel =
-            ViewModelProviders.of(this).get(ResepViewModel::class.java)
         val view = inflater.inflate(R.layout.fragment_resep, container, false)
         return view
     }

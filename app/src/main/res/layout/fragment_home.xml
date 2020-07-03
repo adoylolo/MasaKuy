@@ -66,7 +66,7 @@
             android:text="Masak Lebih Mudah Dengan MasaKuy"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
 
     </RelativeLayout>
 
@@ -82,12 +82,13 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_home"
+        android:background="@drawable/border"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relative_home_2"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>
