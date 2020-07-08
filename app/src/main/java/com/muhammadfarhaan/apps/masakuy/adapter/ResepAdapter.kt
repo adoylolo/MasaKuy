@@ -37,7 +37,8 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ResepHolder, position: Int) {
         holder.vnama.text = dataReseps[position].nama
-        //holder.vdesc.text = dataReseps[position].desc
+        holder.vbahan.text = dataReseps[position].bahan
+        holder.vlangkah.text = dataReseps[position].langkah
         Picasso.get().load(dataReseps[position].image).into(holder.vimage)
 
         holder.setRecyclerItemClickListener(object:IRecyclerItemClickListener {
@@ -46,6 +47,8 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
                 val intent = Intent(mContext, DetailResep::class.java)
                 intent.putExtra("nama_masakan", dataReseps[position].nama)
                 intent.putExtra("image_masakan", dataReseps[position].image)
+                intent.putExtra("bahan_masakan", dataReseps[position].bahan)
+                intent.putExtra("langkah_masakan", dataReseps[position].langkah)
                 view.context.startActivity(intent)
             }
         })
@@ -57,7 +60,8 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
 
     class ResepHolder(@NonNull itemView: View):RecyclerView.ViewHolder(itemView), View.OnClickListener {
         internal var vnama: TextView
-        //internal var vdesc: TextView
+        internal var vbahan: TextView
+        internal var vlangkah: TextView
         internal var vimage: ImageView
         internal var parentLayout: RelativeLayout
         private var recyclerItemClickListener : IRecyclerItemClickListener? = null
@@ -68,7 +72,8 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
 
         init{
             vnama = itemView.findViewById(R.id.txt_title_resep)
-            //vdesc = itemView.findViewById(R.id.txt_desc_resep)
+            vbahan = itemView.findViewById(R.id.txt_bahan_resep)
+            vlangkah = itemView.findViewById(R.id.txt_langkah_resep)
             vimage = itemView.findViewById(R.id.img_resep)
             parentLayout = itemView.findViewById(R.id.parent_layout)
 

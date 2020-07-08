@@ -64,11 +64,12 @@
                 android:layout_margin="10dp">
 
                 <TextView
+                    android:id="@+id/txt_bahan_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:text="@string/dummy_text"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textColor="#000000"/>
 
             </androidx.cardview.widget.CardView>
@@ -80,20 +81,48 @@
                 android:layout_margin="10dp">
 
                 <TextView
+                    android:id="@+id/txt_langkah_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:text="@string/dummy_text"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_yutup"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_yutup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jika kurang mengerti, anda bisa melihat cara masaknya di sini"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="#000000"/>
+
+                    <Button
+                        android:id="@+id/btn_yutup"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txt_yutup"
+                        android:text="Youtube"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        android:textSize="25sp"
+                        android:background="#c4302b"/>
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
