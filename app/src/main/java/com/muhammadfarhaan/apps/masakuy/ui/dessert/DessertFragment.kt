@@ -1,6 +1,5 @@
 package com.muhammadfarhaan.apps.masakuy.ui.dessert
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.muhammadfarhaan.apps.masakuy.R
-import com.muhammadfarhaan.apps.masakuy.adapter.MakananAdapter
+import com.muhammadfarhaan.apps.masakuy.adapter.DessertAdapter
 import com.muhammadfarhaan.apps.masakuy.model.DataResep
 
 class DessertFragment : Fragment() {
@@ -19,7 +18,7 @@ class DessertFragment : Fragment() {
     lateinit var r_Recycler : RecyclerView
     lateinit var r_Database : DatabaseReference
     lateinit var r_list: ArrayList<DataResep>
-    var r_adapter: MakananAdapter? = null
+    var r_adapter: DessertAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +47,7 @@ class DessertFragment : Fragment() {
                     val rsp = dataSnapshot1.getValue(DataResep::class.java)
                     r_list.add(rsp!!)
                 }
-                r_adapter = MakananAdapter(mContext, r_list)
+                r_adapter = DessertAdapter(mContext, r_list)
                 r_Recycler.adapter = r_adapter
             }
 

@@ -16,8 +16,7 @@ import com.muhammadfarhaan.apps.masakuy.model.DataResep
 class ResepFragment : Fragment() {
 
     lateinit var r_Recycler : RecyclerView
-    lateinit var r1_Database : DatabaseReference
-    lateinit var r2_Database : DatabaseReference
+    lateinit var r_Database : DatabaseReference
     lateinit var r_list: ArrayList<DataResep>
     var r_adapter: ResepAdapter? = null
 
@@ -34,13 +33,13 @@ class ResepFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mContext = activity!!.applicationContext
 
-        r1_Database = FirebaseDatabase.getInstance().getReference("Resep")
+        r_Database = FirebaseDatabase.getInstance().getReference("Resep")
         r_Recycler = view.findViewById(R.id.recycler_resep)
         r_Recycler.setHasFixedSize(true)
         val layoutManager = GridLayoutManager(context,2)
         r_Recycler.layoutManager = layoutManager
 
-        r1_Database.addValueEventListener(object : ValueEventListener {
+        r_Database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 r_list = ArrayList()
                 for (dataSnapshot1 in dataSnapshot.children) {

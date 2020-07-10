@@ -39,17 +39,19 @@ class DetailResep : AppCompatActivity() {
     }
 
     private fun getIncomingIntent() {
-        if (intent.hasExtra("nama_masakan") && intent.hasExtra("image_masakan") && intent.hasExtra("bahan_masakan") && intent.hasExtra("langkah_masakan")){
+        if (intent.hasExtra("nama_masakan") && intent.hasExtra("image_masakan")
+            && intent.hasExtra("bahan_masakan") && intent.hasExtra("langkah_masakan")
+            && intent.hasExtra("url_masakan")){
 
             val namaMasakan = intent.getStringExtra("nama_masakan")
             val imageMasakan = intent.getStringExtra("image_masakan")
             val bahanMasakan = intent.getStringExtra("bahan_masakan")
             val langkahMasakan = intent.getStringExtra("langkah_masakan")
-            val test = "https://www.youtube.com/"
+            val urlMasakan = intent.getStringExtra("url_masakan")
 
             button = findViewById(R.id.btn_yutup)
             button.setOnClickListener(View.OnClickListener {
-                val uri = Uri.parse(test)
+                val uri = Uri.parse(urlMasakan)
                 val likeIng = Intent(Intent.ACTION_VIEW, uri)
 
                 likeIng.setPackage("com.youtube.android")

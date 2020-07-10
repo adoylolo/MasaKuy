@@ -22,14 +22,12 @@ import com.squareup.picasso.Picasso
 class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Adapter<ResepAdapter.ResepHolder>() {
     private val mContext: Context
     private val dataReseps:ArrayList<DataResep>
-    private var ref1: DatabaseReference
-    private var ref2: DatabaseReference
+    private var ref: DatabaseReference
 
     init{
         mContext = context
         dataReseps = data
-        ref1 = FirebaseDatabase.getInstance().reference
-        ref2 = FirebaseDatabase.getInstance().getReference("Resep").child("Minuman")
+        ref = FirebaseDatabase.getInstance().getReference("Resep")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResepHolder {
@@ -41,6 +39,7 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
         holder.vnama.text = dataReseps[position].nama
         holder.vbahan.text = dataReseps[position].bahan
         holder.vlangkah.text = dataReseps[position].langkah
+        holder.vurl.text = dataReseps[position].url
         Picasso.get().load(dataReseps[position].image).into(holder.vimage)
 
         holder.setRecyclerItemClickListener(object:IRecyclerItemClickListener {
@@ -51,6 +50,7 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
                 intent.putExtra("image_masakan", dataReseps[position].image)
                 intent.putExtra("bahan_masakan", dataReseps[position].bahan)
                 intent.putExtra("langkah_masakan", dataReseps[position].langkah)
+                intent.putExtra("url_masakan", dataReseps[position].url)
                 view.context.startActivity(intent)
             }
         })
@@ -64,6 +64,7 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
         internal var vnama: TextView
         internal var vbahan: TextView
         internal var vlangkah: TextView
+        internal var vurl: TextView
         internal var vimage: ImageView
         internal var parentLayout: RelativeLayout
         private var recyclerItemClickListener : IRecyclerItemClickListener? = null
@@ -76,6 +77,7 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
             vnama = itemView.findViewById(R.id.txt_title_resep)
             vbahan = itemView.findViewById(R.id.txt_bahan_resep)
             vlangkah = itemView.findViewById(R.id.txt_langkah_resep)
+            vurl = itemView.findViewById(R.id.txt_yutup_resep)
             vimage = itemView.findViewById(R.id.img_resep)
             parentLayout = itemView.findViewById(R.id.parent_layout)
 
