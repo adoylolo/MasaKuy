@@ -17,4 +17,22 @@
         android:label="@string/menu_resep"
         tools:layout="@layout/fragment_resep" />
 
+    <fragment
+        android:id="@+id/nav_makanan"
+        android:name="com.muhammadfarhaan.apps.masakuy.ui.makanan.MakananFragment"
+        android:label="@string/menu_makanan"
+        tools:layout="@layout/makanan_fragment" />
+
+    <fragment
+        android:id="@+id/nav_minuman"
+        android:name="com.muhammadfarhaan.apps.masakuy.ui.minuman.MinumanFragment"
+        android:label="@string/menu_minuman"
+        tools:layout="@layout/minuman_fragment" />
+
+    <fragment
+        android:id="@+id/nav_dessert"
+        android:name="com.muhammadfarhaan.apps.masakuy.ui.dessert.DessertFragment"
+        android:label="@string/menu_dessert"
+        tools:layout="@layout/dessert_fragment" />
+
 </navigation>

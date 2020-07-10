@@ -19,25 +19,23 @@ import com.muhammadfarhaan.apps.masakuy.model.DataResep
 import com.muhammadfarhaan.apps.masakuy.ui.resep.DetailResep
 import com.squareup.picasso.Picasso
 
-class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Adapter<ResepAdapter.ResepHolder>() {
+class DessertAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Adapter<DessertAdapter.DessertHolder>() {
     private val mContext: Context
     private val dataReseps:ArrayList<DataResep>
-    private var ref1: DatabaseReference
-    private var ref2: DatabaseReference
+    private var ref: DatabaseReference
 
     init{
         mContext = context
         dataReseps = data
-        ref1 = FirebaseDatabase.getInstance().reference
-        ref2 = FirebaseDatabase.getInstance().getReference("Resep").child("Minuman")
+        ref = FirebaseDatabase.getInstance().getReference("Resep")
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResepHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DessertHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_detail_resep, parent, false)
-        return ResepHolder(view)
+        return DessertHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ResepHolder, position: Int) {
+    override fun onBindViewHolder(holder: DessertHolder, position: Int) {
         holder.vnama.text = dataReseps[position].nama
         holder.vbahan.text = dataReseps[position].bahan
         holder.vlangkah.text = dataReseps[position].langkah
@@ -60,7 +58,7 @@ class ResepAdapter(context:Context, data:ArrayList<DataResep>): RecyclerView.Ada
         return  dataReseps.size
     }
 
-    class ResepHolder(@NonNull itemView: View):RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    class DessertHolder(@NonNull itemView: View):RecyclerView.ViewHolder(itemView), View.OnClickListener {
         internal var vnama: TextView
         internal var vbahan: TextView
         internal var vlangkah: TextView

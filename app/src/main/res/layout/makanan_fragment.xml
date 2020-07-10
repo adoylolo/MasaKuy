@@ -6,14 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
-        android:id="@+id/relative_resep"
+        android:id="@+id/relative_makanan"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#60000000"
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/header_resep"
+            android:id="@+id/header_makanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -23,7 +23,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Semua Resep"
+            android:text="Resep Makanan"
             android:textColor="#FFFFFF"
             android:textSize="24sp"/>
 
@@ -36,7 +36,7 @@
         android:background="#FFFFFF">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_resep"
+            android:id="@+id/recycler_makanan"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"

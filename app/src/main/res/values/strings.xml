@@ -9,7 +9,10 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_resep">Resep</string>
+    <string name="menu_resep">Semua Resep</string>
+    <string name="menu_makanan">Makanan</string>
+    <string name="menu_minuman">Minuman</string>
+    <string name="menu_dessert">Dessert</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Donec nec varius leo. Curabitur libero erat, tincidunt commodo varius non, mattis eu justo.
         Mauris mattis varius pretium. Suspendisse vitae magna arcu. Cras rhoncus in nibh vulputate pharetra.

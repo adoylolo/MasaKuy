@@ -12,6 +12,18 @@
             android:id="@+id/nav_resep"
             android:icon="@drawable/ic_menu_resep"
             android:title="@string/menu_resep" />
+        <item
+            android:id="@+id/nav_makanan"
+            android:icon="@drawable/ic_menu_food"
+            android:title="@string/menu_makanan" />
+        <item
+            android:id="@+id/nav_minuman"
+            android:icon="@drawable/ic_menu_drink"
+            android:title="@string/menu_minuman" />
+        <item
+            android:id="@+id/nav_dessert"
+            android:icon="@drawable/ic_menu_dessert"
+            android:title="@string/menu_dessert" />
     </group>
 
 </menu>
