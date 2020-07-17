@@ -35,28 +35,35 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:background="#FFFFFF">
 
-        <EditText
-            android:id="@+id/search_resep"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+        <RelativeLayout
+            android:id="@+id/relative_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:paddingStart="20dp"
-            android:background="@drawable/search_layout"
-            android:ems="10"
-            android:hint="Search"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:maxLines="1"
-            android:lines="1"/>
+            android:layout_marginTop="10dp">
 
-        <ImageButton
-            android:id="@+id/search_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/search_resep"
-            android:background="@drawable/icon_search"/>
+            <EditText
+                android:id="@+id/search_resep"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/search_layout"
+                android:ems="10"
+                android:hint="Search"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:maxLines="1"
+                android:lines="1"/>
+
+            <ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@+id/search_resep"
+                android:background="@drawable/icon_search"/>
+
+        </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_resep"
@@ -65,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            android:layout_below="@+id/search_resep"/>
+            android:layout_below="@+id/relative_search"/>
 
     </RelativeLayout>
 
