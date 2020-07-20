@@ -27,7 +27,7 @@ class Home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        Toast.makeText(this,"Firebase connection Success",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Selamat Datang",Toast.LENGTH_SHORT).show()
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
